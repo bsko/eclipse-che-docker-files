@@ -1,4 +1,4 @@
-FROM redis:3.0
+FROM redis:alpine
 RUN apt-get update && apt-get install wget sudo ca-certificates -y && \
     wget -q https://gist.githubusercontent.com/eivantsov/64fa300fb5fbfaaf8422/raw/d5b4b57c98649452ce3a54a29838df78164da2e9/che.sh && sudo chmod a+x che.sh && sleep 2 && ./che.sh
 USER user
